@@ -1,9 +1,13 @@
-import { Router } from "express"
+import { Router } from "express";
 
-const routes = Router()
+import OrdersController from "./controllers/OrdersController";
+
+const routes = Router();
 
 routes.get("/", (request, response) => {
-  return response.send("Hello World!")
-})
+  return response.send("Welcome!");
+});
 
-export default routes
+routes.get("/orders", OrdersController.index);
+
+export default routes;

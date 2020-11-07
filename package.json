@@ -1,0 +1,11 @@
+{
+  "name": "LinkApiTest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sandersoncorrea/LinkApiTest.git",
+  "author": "Sanderson Silva Corrêa <correasanderson@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  }
+}

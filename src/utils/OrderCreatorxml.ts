@@ -65,5 +65,3 @@ export const Create = (deal: IDeal): string => {
      <obs_internas>Status: ${deal.status}</obs_internas>
     </pedido>`;
 };
-
-// export default XmlOrder;

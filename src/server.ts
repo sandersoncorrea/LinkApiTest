@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 import express from "express";
 import mongoose from "mongoose";
 
@@ -7,17 +9,14 @@ const app = express();
 app.use(express.json()); // Make sure it comes back as json
 
 mongoose
-  .connect(
-    "mongodb+srv://admin:linkapi@cluster0.fqc1g.mongodb.net/deals?retryWrites=true&w=majority",
-    {
-      useCreateIndex: true,
-      useNewUrlParser: true,
-      useFindAndModify: false,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(process.env.DB_URI, {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
   .catch((err) => {
-    console.error("Erro na conexão: ", err.stack);
+    console.error("Connection error: ", err.stack);
   });
 
 app.use(routes);

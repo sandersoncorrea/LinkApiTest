@@ -1,8 +1,8 @@
 # Link API Test
 <p align="center">
-<img alt="LinkApi" src="https://stileex.xyz/wp-content/uploads/2019/06/Pipedrive-1.png" width="10%">
+<img alt="Pipedrive" src="https://stileex.xyz/wp-content/uploads/2019/06/Pipedrive-1.png" width="10%">
   <img alt="LinkApi" src="https://www.linkapi.solutions/uploads/2019/10/LinkApi-Logo-2019.png" width="10%">
-  <img alt="LinkApi" src="https://d26lpennugtm8s.cloudfront.net/apps/35-pt_BR-small-Logo-Bling-400x400px-com-fundo.png" width="10%">
+  <img alt="Bling" src="https://media-exp1.licdn.com/dms/image/C560BAQGx3iBuZz31Ow/company-logo_200_200/0?e=2159024400&v=beta&t=kGKa-cU4bKA-atIwnL9_UFiO95Mu_5AWtZKhkaPCmVE" width="10%">
   
 </p>
 
@@ -51,9 +51,6 @@ npm install
 
 ## Routes (running on localhost:3333)
 * GET /import - Exports the orders saved on database 
-* POST /import - Import deals from Pipedrive and save to Bling as order
+* POST /import - Import deals from Pipedrive (status = won) and save to Bling as order
 * GET /reports - Exports the order report grouped by date 
 * DELETE /reports - Clean reports database
-
-## License
-MIT

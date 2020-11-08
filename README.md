@@ -1,63 +1,53 @@
-# Tecnichal test from LinkApi
+# Link API Test
 
-Teste Técnico - Back-end
-Instruções gerais
-Leia atentamente as instruções abaixo para a realização do teste proposto.
+An integration project between Pipedrive and Glimp proposed by LinkApi
 
-Você terá em torno de 72h para realizar o teste proposto.
+* Language - TypeScript (NodeJS)
+* Database - Mongodb
+* Database ODM - Mongoose
 
-_____________________________________________
-
-
-
-OBJETIVO
-
-Deverá construir uma API RESTful usando a tecnologia NodeJS.
+## Installation
 
 
+```bash
+yarn install
+or
+npm install
+```
 
+## Structure
+```
+├── .vscode
+│   └── setting.json
+├── src
+│   ├── controllers 
+│   ├── interfaces   
+│   ├── models      
+│   ├── services
+│   ├── utils 
+│   ├── routes.ts
+│   └── server.ts
+└── .env_example
+└── .eslintrc.json
+└── .gitignore
+└── prettierrc
+└── README.md
+└── packge.json
+└── tsconfig.json
+└── yarn.lock
+```
 
+## Configuration
+* Rename '.env_example' file to '.env' and put the necessary informations: tokens and database URI
 
-REQUISITOS
+## Usage
+* `yarn start`  - Start server
 
-● Criar contas testes nas plataformas Pipedrive e Bling.
+## Routes (running on localhost:3333)
+* GET /import - Exports the orders saved on database 
+* POST /import - Import deals from Pipedrive and save to Glimp as order
+* GET /reports - Exports the order report grouped by date 
+* DELETE /reports - Clean reports database
 
-● Criar uma integração entre as plataformas Pipedrive e Bling. 
-(A integração deve buscar as oportunidades com status igual a ganho no Pipedrive, depois inseri-las como pedido no Bling).
-
-● Criar banco de dados mongo, existem serviços como MongoDB Atlas para criar de graça
-
-● Criar uma collection no banco de dados MongoDB agregando as oportunidades inseridas no Bling por dia e valor total.
-
-● Criar endpoint para trazer os dados consolidados da collection do MongoDB.
-
-
-
-INSTRUÇÕES
-
-● Desenvolva e versione o projeto usando git
-
-● Utilize o GitHub para hospedar o código
-
-● Enviar o link do repositório para people@linkapi.com.br
-
-
-
-O QUE SERÁ AVALIADO
-
-● Quantidade de requisitos realizados
-
-● Desacoplamento de código
-
-● Legibilidade
-
-● Boas práticas de desenvolvimento de API RESTful
-
-● Performance
-
-
-
-Qualquer dúvida pode nos contactar pela Gupy ou Whatsapp.
-
-Boa sorte!! ☺
-
+## License
+MIT

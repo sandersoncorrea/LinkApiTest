@@ -6,6 +6,12 @@ import Pipedrive from "../services/Pipedrive";
 
 export default {
   async index(request: Request, response: Response) {
+    const data = await DealReport.find().sort("date");
+
+    return response.status(200).json({ message: "All orders", data });
+  },
+
+  async store(request: Request, response: Response) {
     const { data } = await Pipedrive.deals("won");
 
     const deals = data.data;

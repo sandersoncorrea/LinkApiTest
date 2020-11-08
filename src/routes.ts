@@ -10,6 +10,8 @@ routes.get("/", (request, response) => {
 });
 
 routes.get("/import", OrdersController.index);
+routes.post("/import", OrdersController.store);
+
 routes.get("/reports", ReportController.index);
 routes.delete("/reports", ReportController.delete);
 

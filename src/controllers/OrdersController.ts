@@ -1,6 +1,6 @@
-import { ok } from "assert";
 import { Request, Response } from "express";
 
+import DealReport from "../models/DealReport";
 import Bling from "../services/Bling";
 import Pipedrive from "../services/Pipedrive";
 
@@ -22,6 +22,13 @@ export default {
         });
       })
     );
+
+    deals.map((deal) => {
+      DealReport.create({
+        date: deal.add_time,
+        total: deal.value,
+      });
+    });
 
     return response
       .status(200)

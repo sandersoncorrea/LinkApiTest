@@ -14,7 +14,6 @@ export default {
   async CreateOrder(deal: IDeal) {
     try {
       const xmlBody = Create(deal);
-      console.log({ xmlBody });
       const response = await api.post(
         "/pedido/json",
         {},
@@ -26,10 +25,8 @@ export default {
           headers: { "Content-Type": "text/xml" },
         }
       );
-
-      console.log(response.data);
     } catch (e) {
-      console.log(e.message);
+      console.error(e.message);
     }
   },
 };
